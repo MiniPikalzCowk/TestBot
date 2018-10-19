@@ -3,12 +3,13 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
 import chalk
+import os
 import urllib.request
 import re
 import time
 from html.parser import HTMLParser
 bot = commands.Bot(command_prefix="-")
-
+bot_token = os.environ['BOT_TOKEN']
 def find_str(s, char):
     index = 0
 
@@ -97,4 +98,4 @@ async def Check():
     await bot.say("Rank Check-Up complete!")
     f.close()
     
-    bot.run("NTAyMTY1MTY0NDEwNTM1OTQ2.Dqj9Ww.fpIlXDNJijJVNtOZ248e7oW5nzI")
+    bot.run(bot_token)
