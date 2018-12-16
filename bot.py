@@ -9,7 +9,7 @@ import re
 import time
 from html.parser import HTMLParser
 bot = commands.Bot(command_prefix="-")
-bot_token = os.environ['TOKEN']
+bot_token = os.getenv('TOKEN')
 def find_str(s, char):
     index = 0
 
